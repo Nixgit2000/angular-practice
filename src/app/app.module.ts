@@ -6,6 +6,8 @@ import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { TemplateComponent } from './template/template.component';
 import { TemplatePipePipe } from './template-pipe.pipe';
 import { PicImportComponent } from './pic-import/pic-import.component';
+import { ButtonComponentComponent } from './button-component/button-component.component';
+
 
 
 @NgModule({
@@ -15,6 +17,8 @@ import { PicImportComponent } from './pic-import/pic-import.component';
     TemplateComponent,
     TemplatePipePipe,
     PicImportComponent,
+    ButtonComponentComponent,
+
 
   ],
   imports: [

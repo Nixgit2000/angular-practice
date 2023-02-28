@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./template.component.css']
 })
 export class TemplateComponent {
+  getMin(a: number,b: number) {
+    if(a<b){
+      return a;
+    }
+    return b;
+  }
 
+  getMax(a: number,b: number) {
+    if(a>b){
+      return a;
+    }
+    return b;
+  }
 }

@@ -12,3 +12,27 @@ Pics below being imported from a component:
 <br><br>
 
 <event-listener></event-listener>
+
+<br><br>
+<div style="display: flex; justify-content: center; align-items: center; border: 1px solid grey; width: 50vw; height: 30vh;">
+<div [hidden]="submitted" >
+<form #petForm="ngForm" (ngSubmit)="onSubmit()">
+    <div style="margin: 2vh;">
+        <label style="margin: 2vh;" for="name">Name</label>
+        <input type="text" id="name" required [(ngModel)]="model.name" name="name">
+    </div>
+    <div style="margin: 2vh;">
+        <label style="margin: 2vh;"for="specie">Specie</label>
+        <select id="specie" required [(ngModel)]="model.specie" name="specie">
+            <option *ngFor="let specie of species" [value]="specie">{{specie}}</option>
+        </select>
+    </div>
+    <button style="margin: 2vh; width: 200px;" [disabled]="!petForm.form.valid" type="submit">Submit</button>
+</form></div>
+<div [hidden]="!submitted">
+    <h2>You have submitted the following:</h2>
+    <p>Name: {{model.name}}</p>
+    <p>Specie: {{model.specie}}</p>
+    <button style="width: 200px;" (click)="submitted = false">Edit</button>
+
+</div></div>

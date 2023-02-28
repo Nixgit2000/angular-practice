@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HelloWorldComponent {
   title='Hello world'
+  imagepic='../assets/Untitled.jpg'
 }

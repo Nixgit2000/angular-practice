@@ -36,3 +36,12 @@ Pics below being imported from a component:
     <button style="width: 200px;" (click)="submitted = false">Edit</button>
 
 </div></div>
+
+<br><br><br><br>
+
+<label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+<p>Value: {{name.value}}</p>
+
+
+<br><br><br><br>
